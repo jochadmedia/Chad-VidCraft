@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#0A0B14</color>
+    <color name="surface">#141622</color>
+    <color name="surface_2">#1E2130</color>
+    <color name="stroke">#2A2E42</color>
+    <color name="text">#F2F4FA</color>
+    <color name="muted">#9AA1B8</color>
+    <color name="cyan">#64E6FF</color>
+    <color name="indigo">#7C5CFF</color>
+    <color name="magenta">#D946EF</color>
+    <color name="amber">#FBBF24</color>
+    <color name="emerald">#34D399</color>
+    <color name="rose">#FB7185</color>
+    <color name="ink">#0A0B14</color>
+    <color name="icon_bg">#0A0B14</color>
+</resources>

@@ -1,0 +1,69 @@
+{
+  "project": "Chad-VidCraft",
+  "root": "/storage/emulated/0/Download/APPS/Chad-VidCraft",
+  "last_updated": "2026-11-07",
+  "version": "1.0",
+  "versionCode": 1,
+  "apk_path": "Chad-VidCraft.apk",
+  "apk_sha256": "236cdd203f4d41beeac233c5f961382db89da58ee197c50d237c4709cc2aaf19",
+  "package": "com.chadvidcraft.app",
+  "min_sdk": 26,
+  "target_sdk": 35,
+  "build_toolchain": {
+    "sdk": "/opt/android-sdk",
+    "platforms": ["android-29", "android-35"],
+    "build_tools": "35.0.0",
+    "java": "javac --release 11",
+    "dex": "d8",
+    "signer": "apksigner (debug keystore in build/)"
+  },
+  "capcut_investigation": {
+    "capcut_found_on_device": true,
+    "package": "com.lemon.lvoverseas",
+    "version_name": "20.1.0",
+    "version_code": 20100200,
+    "main_activity": "com.vega.main.MainActivity",
+    "apk_copied_readonly": "/tmp/opencode/capcut/apk/",
+    "base_apk_sha256": "1b94e8737355c93289f70c855aecfce07b69f9e04ca0ffcf7571a04a238b7603",
+    "rea_mcp_connected": false,
+    "connected_mcp_servers": ["fal", "openrouter", "replicate"],
+    "analysis_tooling": ["aapt2", "unzip", "strings"],
+    "reverse_engineering_performed": "static_only",
+    "note": "CapCut installed; analyzed read-only. Backend hosts, AI models, features, native libs documented in EVIDENCE.md. Nothing copied into Chad-VidCraft."
+  },
+  "trace_scan": {
+    "source_clean": true,
+    "dex_clean": true,
+    "forbidden_terms": ["capcut", "cutting", "bytedance", "tiktok", "com.ss.android", "capcutapi", "lvoverseas", "seedance", "minimax", "qwen", "ailab", "byteintl", "faceu", "vega"],
+    "note": "Only false positive: English word 'available' contains substring 'ailab'."
+  },
+  "app_state": {
+    "tabs": ["Home", "Discover", "Create", "Tasks", "Profile"],
+    "create_modes": ["Music Video", "Dance Video", "Lyric Video", "OnBeat Effects", "Photo Karaoke", "Music Cover Video", "Video to Music", "Realtime", "AI Video", "Image-to-Video", "AI Persona", "AI Canvas", "Auto Edit", "Cutout & Chroma", "Voice & Captions", "Motion FX"],
+    "features": ["5 tabs", "16 create modes", "Director Bot (offline)", "task center with filters", "cloud account (register/login/logout)", "brief sync", "render target switch (Device/Chad cloud)", "cloud job polling cancel/retry/resume", "local render simulation", "draft autosave/restore", "export storyboard JSON", "discover feed", "profile/credits", "original vector icons", "original dark studio theme", "original Chad model catalog", "per-mode credit estimates", "TTS/voiceover, captions, AI cutout, chroma key, stabilize, track, keyframes"],
+    "models": {
+      "image": ["canvas-fast", "canvas-pro", "ink-1"],
+      "video": ["motion-lite", "motion-1", "motion-style", "motion-stage", "motion-dance", "motion-ai", "motion-i2v"],
+      "realtime": ["live-director"],
+      "persona": ["persona-1"],
+      "tts": ["voice-1"]
+    },
+    "server": "server/ (Node 24 TypeScript, deferred - not yet created)"
+  },
+  "next_steps": [
+    "Runtime QA on a real device (install APK, test each mode, cloud toggle, sign-in, render polling)",
+    "Add S3 uploads to Android music flow",
+    "Create server/ backend (Node 24 TypeScript) with auth, projects, render jobs, presign uploads",
+    "Add provider-agnostic video gateway adapter (fails closed when unconfigured)",
+    "Server security: email verification, rate limiting, Postgres"
+  ],
+  "files": {
+    "manifest": "app/AndroidManifest.xml",
+    "resources": "app/res/",
+    "source": "app/src/com/chadvidcraft/app/",
+    "build_script": "build.sh",
+    "memory": "MEMORY.md, memory/STATE.json, AGENTS.md",
+    "evidence": "EVIDENCE.md",
+    "capcut_evidence": "/tmp/opencode/capcut/"
+  }
+}
